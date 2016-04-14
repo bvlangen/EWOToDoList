@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.CheckMenuItem?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="745.0" prefWidth="972.0" styleClass="background"
+            xmlns="http://javafx.com/javafx/8.0.65"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.bvlangen.kungfu.todolist.view.controller.RootLayoutController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Bestand">
+                    <items>
+                        <MenuItem mnemonicParsing="true" onAction="#handleNew" text="Nieuw" accelerator="SHORTCUT+N"/>
+                        <MenuItem mnemonicParsing="true" onAction="#handleOpen" text="Openen" accelerator="SHORTCUT+O"/>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Opslaan" accelerator="SHORTCUT+S"/>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSaveAs" text="Opslaan Als..." accelerator="SHORTCUT+A"/>
+                        <MenuItem mnemonicParsing="true" onAction="#handleExit" text="Exit" accelerator="SHORTCUT+E"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Instellingen">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleUsernameSetting" text="Gebruiker" accelerator="SHORTCUT+G"/>
+                        <CheckMenuItem mnemonicParsing="false" text="Automatisch opslaan" fx:id="autoSave"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="true" onAction="#handleAbout" text="Info" accelerator="SHORTCUT+I"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

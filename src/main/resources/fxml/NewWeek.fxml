@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="117.0" prefWidth="330.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bvlangen.kungfu.todolist.view.controller.NewWeekController">
+   <children>
+      <GridPane layoutX="374.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="117.0" prefWidth="247.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="86.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="234.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="133.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Jaar" GridPane.halignment="RIGHT" />
+            <Label text="Weeknr" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <ButtonBar prefHeight="48.0" prefWidth="226.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#handleOk" text="Ok" />
+                  <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+              </buttons>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </ButtonBar>
+            <ChoiceBox fx:id="yearChoiceBox" prefWidth="150.0" styleClass="background" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </ChoiceBox>
+            <ChoiceBox fx:id="weekNrChoiceBox" prefWidth="150.0" styleClass="background" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </ChoiceBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
